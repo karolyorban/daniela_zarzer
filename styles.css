@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "main_menu"
+                         "main_body";
+    grid-template-rows: 20vh 1fr;
+    min-height: 100vh;
+}
+
+.main-menu {
+    grid-area: main_menu;
+    position: sticky;
+}
+
+.main_body {
+    grid-area: main_body;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section:target {
+    display: block;
+}
