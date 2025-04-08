@@ -11,23 +11,29 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 20vh;
+    scroll-behavior: smooth;
+}
+
 body {
     display: grid;
     grid-template-areas: "main_menu"
                          "main_body";
     grid-template-rows: 20vh 1fr;
     min-height: 100vh;
-    background-color: linen;
 }
 
 .main_menu {
     grid-area: main_menu;
     position: sticky;
+    top: 0;
     display: flex;
-    align-items: flex-end; /* This pushes content to bottom */
-    min-height: 20vh; /* Ensure container has height */
+    align-items: flex-end;
+    min-height: 20vh;
     overflow: hidden;
-    position: relative;
+    z-index: 100;
+    background-color: linen;
 }
 
 .main_menu nav a {
@@ -76,6 +82,7 @@ body {
     pointer-events: none;
     left: 0;
     top: 0;
+    
 }
 
 .nav-gif img {
@@ -89,6 +96,7 @@ body {
     display: flex;
     padding: 2rem 4rem;
     grid-area: main_body;
+    background-color: linen;
 }
 
 .content-section {
