@@ -140,3 +140,56 @@ body {
     transform: scale(1.5) rotateY(720deg);
     opacity: 0.8;
 }
+
+.menuFirmen{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.menuFirmen .slider{
+    position: absolute;
+    width: 50vw;
+    height: 62.5vh;
+    max-width: 200px;
+    max-height: 250px;
+    top: 10%;
+    left: 42.8%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+    animation-play-state: running;
+}
+
+.menuFirmen .slider:hover {
+    animation-play-state: paused;
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.menuFirmen .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(20vw);
+}
+.menuFirmen .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menuFirmen .slider .item img:hover {
+    transform: scale(1.5);
+}
