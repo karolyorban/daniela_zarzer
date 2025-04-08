@@ -17,6 +17,7 @@ body {
                          "main_body";
     grid-template-rows: 20vh 1fr;
     min-height: 100vh;
+    background-color: linen;
 }
 
 .main_menu {
@@ -55,15 +56,14 @@ body {
     width: 100%;
 }
 
-/*------------------*/
 .main_menu nav {
     width: 100%;
     display: flex;
     justify-content: left;
-    align-items: flex-end; /* Align links to bottom */
+    align-items: flex-end;
     position: relative;
-    gap: 20px; /* Space between links */
-    height: 100%; /* Take full height of parent */
+    gap: 20px;
+    height: 100%;
 }
 
 
@@ -74,7 +74,6 @@ body {
     will-change: transform;
     z-index: 1;
     pointer-events: none;
-    /* Center the transform origin */
     left: 0;
     top: 0;
 }
@@ -85,7 +84,6 @@ body {
     transition: transform 0.3s ease;
     display: block;
 }
-/*------------------*/
 
 .main_body {
     display: flex;
