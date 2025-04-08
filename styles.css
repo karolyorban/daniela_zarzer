@@ -106,3 +106,37 @@ body {
 .content-section:target {
     display: block;
 }
+
+.menuPrivat img{
+    max-width: 15vw;
+    padding: 1rem;
+}
+
+.menuFirmen img{
+    max-width: 15vw;
+    padding: 1rem;
+}
+
+.menuTeam img {
+    border: 0px solid linen;
+    max-width: 25vw;
+    padding: 1.5rem 2rem;
+    border-radius: 30px 80px;
+    transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.menuTeam img:hover {
+    transform: scale(1.25);
+    opacity: 0.80;
+}
+
+.menuKontakt img {
+    max-width: 10vw;
+    padding: 3rem;
+    transition: transform 1.6s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.menuKontakt img:hover {
+    transform: scale(1.5) rotateY(720deg);
+    opacity: 0.8;
+}
